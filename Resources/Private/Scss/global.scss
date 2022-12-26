@@ -1,0 +1,26 @@
+// Global html
+html {
+  font-size: 16px;
+}
+
+// Global Body
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: grey;
+}
+
+.grid-container {
+  // max-width: 1540px !important;
+  max-width: 96rem !important;
+  overflow: hidden;
+}
+
+// Foundation - https://get.foundation/sites/docs/xy-grid.html
+
+@charset 'utf-8';
+@import 'foundation';
+
+@include foundation-xy-grid-classes;
+

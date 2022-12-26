@@ -1,0 +1,50 @@
+lib.mainContent = CONTENT
+lib.mainContent {
+  table = tt_content
+  select {
+    pidInList = this
+    where = colPos=0
+    orderBy = sorting ASC
+  }
+}
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+  templateName = TEXT
+  templateName {
+    cObject = TEXT
+    cObject {
+      data = pagelayout
+      required = 1
+      case = ucfirst
+      split {
+        token = pagets__
+        cObjNum = 1
+        1.current = 1
+      }
+    }
+    ifEmpty = Default
+  }
+  variables {
+    mainContent < lib.mainContent
+  }
+  settings {
+
+  }
+
+  templateRootPaths {
+    0 = EXT:kuhschnappel_sitepackage/Resources/Private/Templates/Page/
+    1 = {$page.fluidtemplate.templateRootPath}
+  }
+
+  partialRootPaths {
+    0 = EXT:kuhschnappel_sitepackage/Resources/Private/Partials/
+    1 = {$page.fluidtemplate.partialRootPath}
+  }
+
+  layoutRootPaths {
+    0 = EXT:kuhschnappel_sitepackage/Resources/Private/Layouts/Page/
+    1 = {$page.fluidtemplate.layoutRootPath}
+  }
+}
+

@@ -1,0 +1,22 @@
+{
+	"name": "kuhschnappel/kuhschnappel-sitepackage",
+	"description": "",
+	"type": "typo3-cms-extension",
+	"authors": [{
+		"name": "Mike Zimmer",
+		"role": "Developer"
+	}],
+	"require": {
+		"typo3/cms-core": ">=11.0.0 <12.0.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Kuhschnappel\\KuhschnappelSitepackage\\": "Classes"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "kuhschnappel_sitepackage"
+		}
+	}
+}

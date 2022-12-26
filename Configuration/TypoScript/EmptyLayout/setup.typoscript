@@ -1,0 +1,7 @@
+lib.contentElement.settings.emptyLayout = 1
+page.config {
+  disableAllHeaderCode = 1
+  additionalHeaders.10.header = Content-type:application/json
+  xhtml_cleaning = 0
+  admPanel = 0
+}

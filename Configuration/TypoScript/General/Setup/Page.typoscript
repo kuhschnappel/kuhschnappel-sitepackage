@@ -1,0 +1,54 @@
+page = PAGE
+page {
+  typeNum = 0
+  meta {
+    viewport = width=device-width, initial-scale=1.0
+  }
+
+  headerData {
+
+  }
+
+  includeCSS {
+    website = EXT:kuhschnappel_sitepackage/Resources/Public/Css/global.css
+  }
+
+  includeJSFooter {
+    website = EXT:kuhschnappel_sitepackage/Resources/Public/JavaScript/main-min.js
+  }
+
+}
+
+lib.rootPid = TEXT
+lib.rootPid.data = leveluid : 0
+
+lib.pageInfo = COA
+lib.pageInfo {
+  5 = LOAD_REGISTER
+  5 {
+    ## Set the content's field (default: title):
+    pageField.cObject = TEXT
+    pageField.cObject {
+      field = pageField
+      ifEmpty.data = title
+    }
+
+    ## Allows to override the current page ID:
+    pageUid.cObject = TEXT
+    pageUid.cObject {
+      field = pageUid
+      ifEmpty.data = TSFE:id
+    }
+  }
+
+  20 = RECORDS
+  20 {
+    source.data = register:pageUid
+    tables = pages
+    dontCheckPid = 1
+    conf.pages = TEXT
+    conf.pages.field.data = register:pageField
+  }
+
+  90 = RESTORE_REGISTER
+}

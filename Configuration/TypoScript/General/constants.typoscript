@@ -1,0 +1,20 @@
+//@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+//@import 'EXT:sis_sitepackage/Configuration/TypoScript/General/Constants/*.typoscript'
+
+//#styles.content.loginform.pid = 2
+
+//page {
+//  fluidtemplate {
+//    layoutRootPath = EXT:sis_sitepackage/Resources/Private/Layouts/Page/
+//    partialRootPath = EXT:sis_sitepackage/Resources/Private/Partials/Page/
+//    templateRootPath = EXT:sis_sitepackage/Resources/Private/Templates/Page/
+//  }
+//}
+//
+//plugin.tx_news {
+//   view {
+//      templateRootPath = EXT:sis_sitepackage/Resources/Private/Templates/News/
+//      partialRootPath = EXT:sis_sitepackage/Resources/Private/Partials/News/
+//      layoutRootPath = EXT:sis_sitepackage/Resources/Private/Layouts/News/
+//   }
+//}

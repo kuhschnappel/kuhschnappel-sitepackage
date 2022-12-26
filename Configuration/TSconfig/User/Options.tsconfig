@@ -1,0 +1,3 @@
+options {
+    pageTree.showPageIdWithTitle = 1
+}

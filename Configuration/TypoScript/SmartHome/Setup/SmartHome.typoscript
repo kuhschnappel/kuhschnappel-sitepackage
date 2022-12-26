@@ -1,0 +1,28 @@
+page = PAGE
+page {
+  //typeNum = 123
+  typeNum = 0
+
+  10 = USER
+  10 {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    extensionName = MzSmarthome
+    pluginName = Measurement
+    vendorName = Kuhschnappel
+    #controller = Measurement
+    #action = request
+    switchableControllerActions {
+      Measurement {
+        1 = request
+      }
+    }
+  }
+
+  config {
+    disableAllHeaderCode = 1
+    additionalHeaders.10.header = Content-type:application/json
+    xhtml_cleaning = 0
+    admPanel = 0
+  }
+}
+#http://kuhschnappel.ddnss.de/?type=666001

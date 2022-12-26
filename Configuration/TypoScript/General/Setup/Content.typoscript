@@ -1,0 +1,11 @@
+lib.contentElement {
+  templateRootPaths {
+    10 = EXT:kuhschnappel_sitepackage/Resources/Private/Templates/Content/
+  }
+  partialRootPaths {
+    10 = EXT:kuhschnappel_sitepackage/Resources/Private/Partials/Content/
+  }
+  layoutRootPaths {
+    10 = EXT:kuhschnappel_sitepackage/Resources/Private/Layouts/Content/
+  }
+}
